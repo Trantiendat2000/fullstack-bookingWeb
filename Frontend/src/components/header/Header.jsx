@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./header.css";
 import { DateRange } from "react-date-range";
 import { useState, useEffect } from "react";
-import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css"; // theme css file
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 
@@ -46,6 +46,9 @@ const Header = (props, { type }) => {
   };
 
   const handleSearch = () => {
+    if (window.location.pathname === "/hotels") {
+      window.location.reload();
+    }
     navigate("/hotels", {
       state: { destination, date, options, user },
     });

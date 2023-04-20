@@ -25,3 +25,12 @@
   cursor: pointer;
   color: #003580;
 }
+
+.navButton:hover {
+  opacity: 0.8;
+}
+
+.navButton a {
+  text-decoration: none;
+  font-weight: bold;
+}

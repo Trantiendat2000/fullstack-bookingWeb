@@ -3,8 +3,8 @@ import "./featured.css";
 const Featured = (props) => {
   return (
     <div className="featured">
-      {props.featured.map((feature) => (
-        <div className="featuredItem" key={feature.id}>
+      {props.featured.map((feature, i) => (
+        <div className="featuredItem" key={i}>
           <img
             src={feature.photos[2]}
             alt={feature.name}

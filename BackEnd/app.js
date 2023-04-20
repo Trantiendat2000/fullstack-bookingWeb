@@ -26,6 +26,7 @@ mongoose
   .connect(
     "mongodb+srv://tiendat:dat0948756694@cluster0.bz7lnti.mongodb.net/booking?retryWrites=true&w=majority"
   )
+
   .then((result) => {
     app.listen(5000);
   })

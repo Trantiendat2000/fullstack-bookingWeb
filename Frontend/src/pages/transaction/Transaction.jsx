@@ -37,7 +37,7 @@ const Transaction = () => {
     };
 
     postTransaction();
-  }, []);
+  }, [transactions]);
 
   return (
     <div>
@@ -84,7 +84,7 @@ const Transaction = () => {
             {transactions.map((trans, i) => (
               <tr key={i}>
                 <td>{i + 1}</td>
-                <td>{hotel.name}</td>
+                <td>{trans.name}</td>
                 <td>{trans.room.join(",")}</td>
                 <td>
                   {trans.dateStart
